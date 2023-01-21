@@ -1,5 +1,5 @@
 import {
-    authProviders,
+  authProviders,
   configureWunderGraphApplication,
   cors,
   EnvironmentVariable,
