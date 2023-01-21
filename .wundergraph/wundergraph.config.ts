@@ -28,7 +28,7 @@ const spaceX = introspect.graphql({
 
 // configureWunderGraph emits the configuration
 configureWunderGraphApplication({
-  apis: [spaceX],
+  apis: [faunaDB, spaceX],
   server,
   operations,
   codeGenerators: [
