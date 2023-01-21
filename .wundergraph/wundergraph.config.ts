@@ -9,17 +9,17 @@ import {
 import server from './wundergraph.server'
 import operations from './wundergraph.operations'
 
-const faunaDB = introspect.graphql({
-  apiNamespace: 'faunaDB',
-  url: new EnvironmentVariable('FAUNADB_GRAPHQL_URL'),
-  headers: builder => {
-    builder.addStaticHeader(
-      'Authorization',
-      new EnvironmentVariable('FAUNADB_TOKEN')
-    )
-    return builder
-  },
-})
+// const faunaDB = introspect.graphql({
+//   apiNamespace: 'faunaDB',
+//   url: new EnvironmentVariable('FAUNADB_GRAPHQL_URL'),
+//   headers: builder => {
+//     builder.addStaticHeader(
+//       'Authorization',
+//       new EnvironmentVariable('FAUNADB_TOKEN')
+//     )
+//     return builder
+//   },
+// })
 
 const spaceX = introspect.graphql({
   apiNamespace: 'spacex',
