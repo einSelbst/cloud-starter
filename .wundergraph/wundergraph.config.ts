@@ -26,17 +26,18 @@ configureWunderGraphApplication({
     },
   ],
   cors: {
-    ...cors.allowAll,
-    allowedOrigins:
+      ...cors.allowAll,
+      allowedOrigins:
       process.env.NODE_ENV === "production"
-        ? [
-            // change this before deploying to production to the actual domain where you're deploying your app
-            "http://localhost:3000",
-          ]
-        : [
-            "http://localhost:3000",
-            new EnvironmentVariable("WG_ALLOWED_ORIGIN"),
-          ],
+      ? [
+          'https://reifenextrakt-storefront.vercel.app',
+          // change this before deploying to production to the actual domain where you're deploying your app
+          // "http://localhost:3000",
+      ]
+      : [
+          "http://localhost:3000",
+          new EnvironmentVariable("WG_ALLOWED_ORIGIN"),
+      ],
   },
   dotGraphQLConfig: {
     hasDotWunderGraphDirectory: false,
