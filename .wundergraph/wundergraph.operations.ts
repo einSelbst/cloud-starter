@@ -1,5 +1,5 @@
-import { configureWunderGraphOperations } from '@wundergraph/sdk'
-import type { OperationsConfiguration } from './generated/wundergraph.operations'
+import { configureWunderGraphOperations } from "@wundergraph/sdk";
+import type { OperationsConfiguration } from "./generated/wundergraph.operations";
 
 export default configureWunderGraphOperations<OperationsConfiguration>({
   operations: {
@@ -8,7 +8,7 @@ export default configureWunderGraphOperations<OperationsConfiguration>({
         required: false,
       },
     },
-    queries: config => ({
+    queries: (config) => ({
       ...config,
       caching: {
         enable: false,
@@ -21,12 +21,12 @@ export default configureWunderGraphOperations<OperationsConfiguration>({
         pollingIntervalSeconds: 1,
       },
     }),
-    mutations: config => ({
+    mutations: (config) => ({
       ...config,
     }),
-    subscriptions: config => ({
+    subscriptions: (config) => ({
       ...config,
     }),
     custom: {},
   },
-})
+});

@@ -2,6 +2,10 @@ query Dragons {
   spacex_dragons {
     name
     active
-    id
+    # remove the comments to add thrusters to the query
+    #      thrusters {
+    #          amount
+    #          pods
+    #      }
   }
 }
