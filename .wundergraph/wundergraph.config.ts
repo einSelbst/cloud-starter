@@ -20,9 +20,9 @@ const faunaDB = introspect.graphql({
   headers: builder => {
     builder.addStaticHeader(
       'Authorization',
-      "Bearer fnAE4ciN2hAA1gvPF_kV8bzIoYDiTmff3RPejDh8"
+      // "Bearer fnAE4ciN2hAA1gvPF_kV8bzIoYDiTmff3RPejDh8"
       // "Bearer fnAE6xgAcTAA18qYvRrzc_pSKN3KgYl5rCx6qEQ0"
-      // new EnvironmentVariable('FAUNADB_TOKEN')
+      new EnvironmentVariable('FAUNADB_TOKEN')
     );
     return builder;
   },
